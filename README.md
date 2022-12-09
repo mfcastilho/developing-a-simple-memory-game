@@ -1,1 +1,1 @@
-# developing-a-simple-memory-game
+# developing a simple memory game
