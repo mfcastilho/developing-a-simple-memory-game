@@ -18,7 +18,7 @@
 
     <% dataBase.forEach(dino =>{ %>
 
-      <div class="card-box card">
+      <div class="card-box card" id="<%= dino.name %> " name="<%= dino.name %> ">
         <img class="dinosaur-picture card-front" src="<%= dino.image %>" alt="dino-picture">
         <img class="hidden-picture card-back" src="/img/Ponto-Interrogacao.png" alt="hidden picture image">
       </div>

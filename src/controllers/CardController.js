@@ -8,6 +8,8 @@ const CardController ={
     // Loop em todos os elementos
     for(let i = dataBase.length - 1; i > 0; i--){
 
+      console.log(dataBase[i].name);
+
       // Escolhendo elemento aleatório
       const j = Math.floor(Math.random() * (i+1));
 
