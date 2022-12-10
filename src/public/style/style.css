@@ -11,17 +11,18 @@
 
 
 body{
-  height: 100vh;
+ 
   display: flex;
   background-color: aliceblue;
 }
 
 .memory-game{
-  height: 840px;
-  width: 840px;
+  height: 74rem;
+  width: 1280px;
 
-  margin: auto;
+  margin:0 auto;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 
   perspective: 20000px;
@@ -56,8 +57,8 @@ body{
 
 
 .card{
-  height: calc(33.333% - 10px);
-  width: calc(25% - 10px);
+  height: calc(21.333% - 10px);
+  width: calc(12% - 10px);
   margin: 5px;
   position: relative;
 
