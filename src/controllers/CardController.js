@@ -1,24 +1,33 @@
-const dataBase = require("../database/database.js");
+let dataBase = require("../database/database.js");
 
 
 const CardController ={
 
   // Método para randomizar array
   shufflingCards: ()=>{
-    // Loop em todos os elementos
-    for(let i = dataBase.length - 1; i > 0; i--){
 
-      console.log(dataBase[i].name);
+
+    let db = dataBase;
+    let db2 = dataBase;
+    const array = db.concat(db2);
+
+    console.log("============");
+    console.log(array.length);
+    console.log("============");
+    console.log(array);
+    for(let i = array.length - 1; i > 0; i--){
+
+      console.log(array[i].name);
 
       // Escolhendo elemento aleatório
       const j = Math.floor(Math.random() * (i+1));
 
       // Reposicionando elemento
-      [dataBase[i], dataBase[j]] = [dataBase[j], dataBase[i]];
+      [array[i], array[j]] = [array[j], array[i]];
     }
 
     // Retornando array com aleatoriedade
-    return dataBase;
+    return array;
   }
 }
 
