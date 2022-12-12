@@ -4,6 +4,9 @@ let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
 
+let checkbox = document.querySelector("#mute-button-checkbox-id");
+checkbox.disabled = true;
+
 let muteButton = document.querySelector(".mute-button");
 
 let startAudio = true;
@@ -152,10 +155,25 @@ cards.forEach(card=>{
 
 muteButton.addEventListener("click", ()=>{
 
+  const checkbox = document.querySelector("#mute-button-checkbox-id");
+
   if(startAudio){
     startAudio = false;
+
+    muteButton.style.backgroundColor = "orangered";
+    muteButton.style.color = "#FFF";
+
+    checkbox.checked = true;
+    checkbox.disabled = false;
+
   }else{
     startAudio = true;
+
+    muteButton.style.backgroundColor = "#ddd2d2";
+    muteButton.style.color = "#000"; 
+    
+    checkbox.checked = false;
+    checkbox.disabled = true;
   }
   
 });
