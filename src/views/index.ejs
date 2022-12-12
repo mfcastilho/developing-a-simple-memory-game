@@ -4,28 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memory Gamet</title>
+  <title>Dino Memory Game</title>
 
 
   <link rel="stylesheet" href="/style/style.css">
 
 
   <script src="/src/app.js" defer></script>
-  <script src="/js/flipTheCard.js" defer></script>
+  <script  src="/js/flipTheCard.js" defer></script>
 </head>
 <body>
-  <div class="main-container memory-game">
 
-    <% dataBase.forEach(dino =>{ %>
+  <div class="main-container">
+    <div class="memory-game">
 
-      <div class="card-box card" id="<%= dino.name %> " name="<%= dino.name %> ">
-        <img class="dinosaur-picture card-front" src="<%= dino.image %>" alt="dino-picture">
-        <img class="hidden-picture card-back" src="/img/Ponto-Interrogacao.png" alt="hidden picture image">
-      </div>
-
-    <% }) %> 
-    
-
+      <% dataBase.forEach(dino =>{ %>
+  
+        <div class="card-box card" id="<%= dino.name %>" name="<%= dino.name %>">
+          <img class="dinosaur-picture card-front" src="<%= dino.image %>" alt="dino-picture" title="<%= dino.name %>">
+          <img class="hidden-picture card-back" src="/img/Ponto-Interrogacao.png" alt="hidden picture image">
+        </div>
+  
+      <% }) %> 
+      
+  
+    </div>
+    <aside class="optionals-buttons-container">
+      <button class="mute-button">Silenciar audio</button>
+    </aside>
   </div>
+  
+
+  
 </body>
 </html>
