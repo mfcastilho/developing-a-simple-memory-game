@@ -72,7 +72,7 @@ body{
 
   border-radius: .5rem;
 
-  background-color: #b4b4b4;
+  background-color: #a2a0b6;
 
 
   /*propriedade que retira o verso do elemento*/
@@ -100,7 +100,11 @@ body{
   padding: 1rem;
 
   display: flex;
-  
+  justify-content: center;
+
+  margin: 0 2rem;
+
+
   perspective: 20000px;
 
   border: 2px solid black;
@@ -109,8 +113,38 @@ body{
 
 
 .optionals-buttons-container button{
-  width: 60%;
-  height: 12%;
+ 
+  height: 4rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  background-color: #ddd2d2;
+  margin-right: 2rem;
+
+  transition: .6s linear;
+
+  border: none;
+ 
+  border-radius: .4rem;
+}
+
+.optionals-buttons-container button:hover{
+  background-color: orangered;
+  color: #FFF;
+
+  border: none;
+}
 
 
+.wrapper-elements{
+  
+  
+}
+
+input.mute-button-checkbox{
+  height: 1rem;
+  width: 1rem;
+ transform: scale(200%);
+
+ margin-left: 2rem;
 }
