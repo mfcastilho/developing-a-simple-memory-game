@@ -16,48 +16,30 @@ body{
   background-color: aliceblue;
 }
 
-.memory-game{
-  height: 74rem;
-  width: 1280px;
-
-  margin:0 auto;
-  display: flex;
+.main-container{
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
   justify-content: space-around;
+  display: flex;
+}
+
+.memory-game{
+  height: 46rem;
+  width: 80%;
+
+  margin: 1rem 0 1rem 1rem;
+  display: flex;
+  
   flex-wrap: wrap;
 
   perspective: 20000px;
 }
 
-/* .main-container{
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-
-
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-} */
-
-
-/* .card-box{
-
-  margin: .5rem 1rem;
-
-  border: 2px solid darkslategray;
-  border-radius: 2rem;
-  
-  padding: .2rem 1rem;
-
-  box-shadow: 1px 1px 1px rgba(1, 1, 1, .3);
-  cursor: pointer;
-
-  transform: scale(1);
-} */
-
 
 .card{
-  height: calc(21.333% - 10px);
+  height: calc(33.333% - 10px);
   width: calc(12% - 10px);
   margin: 5px;
   position: relative;
@@ -68,8 +50,9 @@ body{
 
   transform: scale(1);
 
-  transform-style: preserve-3d;/*Não vai deixar o elemento achatado no plano*/
 
+  /*Não vai deixar o elemento achatado no plano*/
+  transform-style: preserve-3d;
   transition: transform .9s;
 }
 
@@ -83,7 +66,7 @@ body{
 .card-front, .card-back{
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
 
   position: absolute;
 
@@ -108,27 +91,26 @@ body{
 
 }
 
-/* .card-box img{
-  width: 14rem;
-  height: 19rem;
-}
 
+.optionals-buttons-container{
+  height: 60.9rem;
+  width: 20%;
 
-.dinosaur-picture{
+  margin: 1rem 1rem;
+  padding: 1rem;
 
-  display: none;
-
-  transform: rotateY(180deg);
-}
-
-.dinosaur-picture.flip{
-  transform: rotateY(180deg);
-}
-
-.hidden-picture{
-  background-color: rgb(145, 143, 143);
+  display: flex;
   
-} 
+  perspective: 20000px;
 
-*/
+  border: 2px solid black;
+  border-radius: 1rem;
+}
 
+
+.optionals-buttons-container button{
+  width: 60%;
+  height: 12%;
+
+
+}
