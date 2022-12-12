@@ -12,6 +12,7 @@
 
   <script src="/src/app.js" defer></script>
   <script  src="/js/flipTheCard.js" defer></script>
+  <script src="/js/timerFunctions.js" defer></script>
 </head>
 <body>
 
@@ -29,13 +30,32 @@
       
   
     </div>
+
     <aside class="optionals-buttons-container">
+
       <div class="wrapper-elements">
-        <button class="mute-button">Silenciar audio</button>
-        <input type="checkbox" id="mute-button-checkbox-id" name="mute-button-checkbox" class="mute-button-checkbox" >
+
+        <button class="mute-button styling-buttons">Silenciar audio</button>
+
+        <div class="input-box">
+          <input type="checkbox" id="mute-button-checkbox-id" name="mute-button-checkbox" class="mute-button-checkbox">
+        </div>
+
+      </div>
+      <div class="stopwatch_box">
+          
+        <div class="stopwatch">
+          <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+        </div>
+      
+        <button class="styling-buttons" data-start-button type="button" name="start">start</button>
+        <button class="styling-buttons" data-pause-button type="button" name="pause">pause</button>
+        <button class="styling-buttons" data-reset-button type="button" name="reset">reset</button>
+        
       </div>
       
     </aside>
+
   </div>
   
 

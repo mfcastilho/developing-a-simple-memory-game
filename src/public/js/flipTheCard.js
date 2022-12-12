@@ -112,6 +112,11 @@ function audioFoundTheMatch(dinoName){
   }
 
   
+  let audioCelebration = new Audio();
+  const urlCelebration = `../sounds/Clapping-sound.mp3`;
+  audioCelebration.src = urlCelebration;
+
+
   let audio1 = new Audio();
   const url1 = `../sounds/Parabéns-Encontrou-a-dupla-de.mp3`;
   audio1.src = url1;
@@ -121,16 +126,26 @@ function audioFoundTheMatch(dinoName){
   audio.src = url;
 
   lockBoard = true;
+
   setTimeout(()=>{
-    audio1.play();
+    audioCelebration.play();
     setTimeout(()=>{
-      audio.play();
-    },3000);
-    
-    setTimeout(()=>{
-      lockBoard = false;
-    },4000)
-  }, 2500)
+
+      setTimeout(()=>{
+        audio1.play();
+      },1800)
+      
+      setTimeout(()=>{
+        audio.play();
+      },5000);
+      
+      setTimeout(()=>{
+        lockBoard = false;
+      },4000)
+    }, 2500)
+  },1000)
+  
+  
   
 }
 
@@ -160,15 +175,24 @@ muteButton.addEventListener("click", ()=>{
   if(startAudio){
     startAudio = false;
 
+    muteButton.innerHTML = "Audio silenciado";
     muteButton.style.backgroundColor = "orangered";
     muteButton.style.color = "#FFF";
 
     checkbox.checked = true;
+
+    checkbox.addEventListener("click", ()=>{
+      if(checkbox.checked == false){
+        checkbox.checked = true;
+      }
+    });
+   
     checkbox.disabled = false;
 
   }else{
     startAudio = true;
 
+    muteButton.innerHTML = "Silenciar audio";
     muteButton.style.backgroundColor = "#ddd2d2";
     muteButton.style.color = "#000"; 
     
@@ -177,5 +201,16 @@ muteButton.addEventListener("click", ()=>{
   }
   
 });
+
+// muteButton.addEventListener("mouseover",()=>{
+
+//   muteButton.style.backgroundColor = "orangered";
+//   muteButton.style.color = "#FFF";
+// });
+// muteButton.addEventListener("mouseleave", ()=>{
+//   muteButton.style.backgroundColor = "#ddd2d2";
+//   muteButton.style.color = "#000";
+
+// });
 
 

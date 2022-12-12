@@ -23,13 +23,15 @@ body{
   margin: 0 auto;
   justify-content: space-around;
   display: flex;
+
+  padding: 1rem;
 }
 
 .memory-game{
-  height: 46rem;
+  
   width: 80%;
 
-  margin: 1rem 0 1rem 1rem;
+  margin: 0 0 0 1rem;
   display: flex;
   
   flex-wrap: wrap;
@@ -39,8 +41,11 @@ body{
 
 
 .card{
-  height: calc(33.333% - 10px);
-  width: calc(12% - 10px);
+  
+  height: 14rem;
+  width: 11rem;
+  /* height: calc(33.333% - 10px);
+  width: calc(12% - 10px); */
   margin: 5px;
   position: relative;
 
@@ -93,33 +98,31 @@ body{
 
 
 .optionals-buttons-container{
-  height: 60.9rem;
+  /* height: 60.9rem; */
   width: 20%;
 
-  margin: 1rem 1rem;
-  padding: 1rem;
+ 
+  margin: 0 2rem;
+  padding: 1rem 0;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 
-  margin: 0 2rem;
-
-
+  
   perspective: 20000px;
 
   border: 2px solid black;
   border-radius: 1rem;
 }
 
-
-.optionals-buttons-container button{
- 
+.styling-buttons{
   height: 4rem;
+  width: 16rem;
   padding: 1rem;
   cursor: pointer;
 
   background-color: #ddd2d2;
-  margin-right: 2rem;
+  margin-right: 1rem;
 
   transition: .6s linear;
 
@@ -128,23 +131,60 @@ body{
   border-radius: .4rem;
 }
 
-.optionals-buttons-container button:hover{
+.styling-buttons:hover{
   background-color: orangered;
   color: #FFF;
-
-  border: none;
 }
+
+
+.wrapper-elements button{
+ 
+  margin-left: 1rem;
+}
+
 
 
 .wrapper-elements{
-  
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+ 
+
+  margin-bottom: .5rem;
+}
+
+input.input-box{
+  height: 1rem;
+  width: 1rem;
   
 }
 
-input.mute-button-checkbox{
-  height: 1rem;
-  width: 1rem;
- transform: scale(200%);
+.input-box{
+  height: 4rem;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- margin-left: 2rem;
+input.mute-button-checkbox{
+  transform: scale(200%);
+}
+
+.stopwatch_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: .5rem;
+ 
+}
+
+.stopwatch{
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+.stopwatch_box button{
+  margin-bottom: 1rem;
 }
