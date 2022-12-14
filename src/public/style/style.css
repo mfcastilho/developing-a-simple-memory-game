@@ -131,7 +131,7 @@ body{
   border-radius: .4rem;
 }
 
-.styling-buttons:hover{
+.stopwatch_box .styling-buttons:hover{
   background-color: orangered;
   color: #FFF;
 }
