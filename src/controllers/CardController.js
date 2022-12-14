@@ -11,10 +11,10 @@ const CardController ={
     let db2 = dataBase;
     const array = db.concat(db2);
 
-    console.log("============");
-    console.log(array.length);
-    console.log("============");
-    console.log(array);
+    // console.log("============");
+    // console.log(array.length);
+    // console.log("============");
+    // console.log(array);
     for(let i = array.length - 1; i > 0; i--){
 
       console.log(array[i].name);
@@ -25,6 +25,8 @@ const CardController ={
       // Reposicionando elemento
       [array[i], array[j]] = [array[j], array[i]];
     }
+
+    console.log(array);
 
     // Retornando array com aleatoriedade
     return array;
