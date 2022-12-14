@@ -87,6 +87,11 @@ function resetBoard(){
   [firstCard, secondCard] = [null, null];
 }
 
+
+
+
+//======Funções de manipulação de audio=======
+
 function audioDinoName(dinoName){
 
   if(!startAudio){
@@ -129,6 +134,7 @@ function audioFoundTheMatch(dinoName){
 
   setTimeout(()=>{
     audioCelebration.play();
+    audioCelebration.volume = 0.4;
     setTimeout(()=>{
 
       setTimeout(()=>{
