@@ -14,7 +14,7 @@ let cron;
 
 
 function start(){
-  // pause();
+  pause();
 
   console.log("Clicou")
   
