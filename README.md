@@ -1,3 +1,3 @@
 # developing a simple memory game
 
-## Project have: html, css and javascript
+## Project languages: html, css and javascript
